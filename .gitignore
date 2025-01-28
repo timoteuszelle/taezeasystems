@@ -12,3 +12,6 @@ temp/
 
 # Ignore tar.gz
 *.tar.gz
+
+#settings .json
+settigs.json
