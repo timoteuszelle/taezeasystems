@@ -39,6 +39,7 @@ with lib;
           env = SDL_VIDEODRIVER, x11
           env = MOZ_ENABLE_WAYLAND, 1
           exec-once = easyeffects --gapplication-service
+          exec-once = solaar
           exec-once = dbus-update-activation-environment --systemd --all
           exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
           exec-once = killall -q swww;sleep .5 && swww init

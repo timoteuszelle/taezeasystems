@@ -6,9 +6,9 @@ temp/
 
 # ignore Appimages
 *.Appimage
+*.appimage
 
 #ignore certain files
-face.jpg
 
 # Ignore tar.gz
 *.tar.gz
