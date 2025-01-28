@@ -4,5 +4,6 @@ ToDo: fix wallsetter / swww script. Currently it doesn't work anymore, need to f
 
 Some things that were broken with updates are commented out in the configs, it didn't seem to have much impact on looks or functinality, so no need to change for now.
 
-What does this hyprland config looks like:
+How does this Hyprland nix configuration look:
+
 <img src= https://github.com/timoteuszelle/taezeasystems/blob/main/demo.png>
