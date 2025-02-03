@@ -93,6 +93,7 @@ with lib;
           windowrulev2 = opacity 0.9 0.7, class:^(msedge)$
           windowrulev2 = opacity 0.9 0.7, class:^(X)$
           windowrulev2 = opacity 0.9 0.7, class:^(Apple Music)$
+          windowrulev2 = opacity 0.9 0.7, class:^(warp-terminal)$
           gestures {
             workspace_swipe = true
             workspace_swipe_fingers = 3
