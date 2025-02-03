@@ -12,7 +12,13 @@ pkgs.writeShellScriptBin "wallsetter" ''
   # Kill other instances of wallsetter
   for pid in $(pidof -o %PPID -x wallsetter); do
     if [ "$pid" != "$$" ]; then
-      kill $pid
+      kill -s SIGTERM $pid
+      #wait for cleanup else just SIGKILL
+      sleep 0.5
+      if kill -0 $pid 2>/dev/null; then
+        echo "Process $pid did not terminate, sending SIGKILL" >> ~/wallsetter_trap.log
+        kill -s SIGKILL $pid
+      fi
     fi
   done
 
