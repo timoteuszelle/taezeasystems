@@ -13,13 +13,15 @@ in
       homeMode = "755";
       isNormalUser = true;
       description = "${gitUsername}";
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-        "libvirtd"
-        "scanner"
-        "lp"
-      ];
+    extraGroups = [
+    "networkmanager"
+    "wheel"
+    "libvirtd"
+    "scanner"
+    "lp"
+    "nix"
+    "nixbld"
+    ];
       shell = pkgs.bash;
       ignoreShellProgramCheck = true;
       packages = with pkgs; [
