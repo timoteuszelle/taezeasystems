@@ -366,6 +366,10 @@ in
     #docker-compose # start group of containers for dev
     podman-compose # start group of containers for dev
     pkgs.warp-terminal
+    gh
+    openssh
+    openssl
+    sshs
   ];
   
 

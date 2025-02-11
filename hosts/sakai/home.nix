@@ -12,8 +12,10 @@ in
   # Home Manager Settings
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
-  home.stateVersion = "24.05";
-  home.sessionVariables = { NIXOS_OZONE_WL = "1";};
+home.stateVersion = "24.05";
+home.sessionVariables = {
+NIXOS_OZONE_WL = "1";
+};
 
   # Import Program Configurations
   imports = [
@@ -96,11 +98,17 @@ in
       gtk-application-prefer-dark-theme = 1;
     };
   };
-  qt = {
-    enable = true;
-    style.name = "adwaita-dark";
-    platformTheme.name = "gtk3";
-  };
+qt = {
+enable = true;
+platformTheme = lib.mkForce {
+    name = "gtk3";
+    package = pkgs.libsForQt5.qtstyleplugins;
+};
+style = lib.mkForce {
+    name = "adwaita-dark";
+    package = pkgs.adwaita-qt;
+};
+};
 
 
   # Scripts
